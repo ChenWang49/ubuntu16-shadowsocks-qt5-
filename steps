@@ -38,3 +38,6 @@ sudo genpac --proxy="SOCKS5 127.0.0.1:1080" -o autoproxy.pac --gfwlist-url=
 根据自身用户名修改URL输入，点击“apply system wide”，然后输入密码
 
 完毕！
+
+(https://blog.csdn.net/u010260808/article/details/84573184)
+(https://www.litcc.com/2016/12/29/Ubuntu16-shadowsocks-pac/index.html)
