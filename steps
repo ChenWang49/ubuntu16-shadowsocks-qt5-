@@ -1,0 +1,40 @@
+一、下载ShadowSocks-Qt5 https://github.com/shadowsocks/shadowsocks-qt5/releases
+ 
+ 下载好之后放到自己的文件夹里 然后给权限直接双击运行；
+
+二、接着配置shadowsocks-qt5
+  配置名称
+  服务器端口
+  秘钥
+其他不变
+添加成功后，测试延迟，连接
+
+三、安装genpac
+
+本人电脑配置Anaconda（python3.7）,不需要这一步：apt-get install python-pip
+直接安装genpan: pip install genpac
+
+四、下载gfwlist
+
+第一种方式：
+ enpac --pac-proxy "SOCKS5 127.0.0.1:1080" --gfwlist-proxy="SOCKS5 127.0.0.1:1080" --gfwlist-url=
+ https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt --output="autoproxy.pac" 
+ （亲测，有错，下载不下来。不过有人可以用，不知原因。）
+
+第二种方式：
+
+sudo genpac --proxy="SOCKS5 127.0.0.1:1080" -o autoproxy.pac --gfwlist-url=
+"https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt"
+（亲测，可用）
+
+接着去文件查看，下载下的autoproxy.pac文件
+
+（genpac 的详细使用说明见 GitHub - Wiki：https://github.com/JinnLynn/GenPAC）
+
+五、设置全局代理
+
+点击：System settings > Network > Network Proxy，选择 Method 为 Automatic 
+设置 Configuration URL 为 autoproxy.pac 文件的路径，例如：file:///home/xxx/Documents/shadowsocks/autoproxy.pac
+根据自身用户名修改URL输入，点击“apply system wide”，然后输入密码
+
+完毕！
