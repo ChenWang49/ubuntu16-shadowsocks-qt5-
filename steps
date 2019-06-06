@@ -13,6 +13,7 @@
 
 本人电脑配置Anaconda（python3.7）,不需要这一步：apt-get install python-pip
 直接安装genpan: pip install genpac
+             
 
 四、下载gfwlist
 
@@ -25,6 +26,7 @@
 
 sudo genpac --proxy="SOCKS5 127.0.0.1:1080" -o autoproxy.pac --gfwlist-url=
 "https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt"
+(若是出现genpac:命令找不到错误  (sudo -H pip install genpac))
 （亲测，可用）
 
 接着去文件查看，下载下的autoproxy.pac文件
